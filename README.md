@@ -9,8 +9,6 @@ pip install PyOpenGL PyOpenGL_accelerate
 Demonstrating the use of the PyOpenGL library to create a window with an OpenGL context using vertex and fragment shaders.
 Compiling vertex and fragment shaders from file paths, creating a shader program, adding a framebuffer object and a texture.
 
-Using PyOpenGL to create a window with an OpenGL context, rendering to a textured quad.
-Doing so by setting up a vertex buffer object (VBO) with the vertex positions and texture coordinates, rendering the quad with the shader program.
-The texture for the quad is stored in a framebuffer object (FBO), which allows for off-screen rendering.
+Rendering to a textured quad. Doing so by setting up a vertex buffer object (VBO) with the vertex positions and texture coordinates, quad texture is stored in a framebuffer object (FBO), which allows for off-screen rendering.
 
-Then continuously checking for modification time of the shader files, recompiling the shader program if any of the files have been modified.
+Checking for modification time of the shader files, recompiling the shader program if any of the files have been modified.
