@@ -29,14 +29,14 @@ def build_shader():
         compileShader(fs, GL_FRAGMENT_SHADER))
     glUseProgram(build_shader.program)
 
-    build_shader.vertex_array_object = glGenVertexArrays(1)
+    vao = glGenVertexArrays(1)
     vd = [-1.0, -1.0, 0.0, 0.0, 0.0,
            1.0, -1.0, 0.0, 1.0, 0.0,
            1.0,  1.0, 0.0, 1.0, 1.0,
           -1.0,  1.0, 0.0, 0.0, 1.0]
     vd_gl = (GLfloat * len(vd))(*vd)
-    glBindVertexArray(build_shader.vertex_array_object)
-    glBindBuffer(GL_ARRAY_BUFFER, build_shader.vertex_array_object)
+    glBindVertexArray(vao)
+    glBindBuffer(GL_ARRAY_BUFFER, vao)
     glBufferData(GL_ARRAY_BUFFER, len(vd) * 4, vd_gl, GL_STATIC_DRAW)
 
     glEnableVertexAttribArray(0)
